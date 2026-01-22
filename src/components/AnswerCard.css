@@ -1,0 +1,168 @@
+.answer-card {
+  background: white;
+  border-radius: var(--border-radius-lg);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s;
+}
+
+.answer-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.answer-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.answer-date {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.date-icon {
+  font-size: 14px;
+}
+
+.answer-menu {
+  position: relative;
+}
+
+.menu-button {
+  padding: 4px 8px;
+  font-size: 20px;
+  color: var(--color-text-secondary);
+}
+
+.menu-dropdown {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background: white;
+  border-radius: var(--border-radius-sm);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  z-index: 10;
+  min-width: 100px;
+}
+
+.menu-dropdown button {
+  display: block;
+  width: 100%;
+  padding: 12px 16px;
+  text-align: left;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-primary);
+  background: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.menu-dropdown button:hover {
+  background: var(--color-background);
+}
+
+.menu-dropdown button.danger {
+  color: #e74c3c;
+}
+
+.answer-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.answer-question {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  line-height: 1.4;
+}
+
+.answer-mood-display {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mood-emoji-large {
+  font-size: 28px;
+}
+
+.answer-text-display {
+  font-size: var(--font-size-md);
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  white-space: pre-wrap;
+}
+
+.answer-tags-display {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.tag-display {
+  padding: 4px 10px;
+  background: var(--color-background);
+  color: var(--color-primary);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  border: 1px solid var(--color-primary);
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .answer-card {
+    padding: 16px;
+  }
+
+  .answer-question {
+    font-size: 15px;
+  }
+
+  .answer-text-display {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .answer-card {
+    padding: 14px;
+  }
+
+  .answer-date {
+    font-size: 12px;
+  }
+
+  .answer-question {
+    font-size: 14px;
+  }
+
+  .mood-emoji-large {
+    font-size: 24px;
+  }
+
+  .answer-text-display {
+    font-size: 13px;
+  }
+
+  .menu-dropdown {
+    min-width: 80px;
+  }
+
+  .menu-dropdown button {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+}

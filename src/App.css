@@ -1,0 +1,12 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-background);
+}
+
+.app-content {
+  flex: 1;
+  padding-bottom: 80px; /* 네비게이션 높이 확보 */
+  overflow-y: auto;
+}
